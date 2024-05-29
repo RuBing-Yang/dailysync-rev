@@ -4,11 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     #  每2小时检查一次
-    - cron: "0 */2 * * *"
+    # - cron: "0 */2 * * *"
     # 每30min执行一次
     # - cron: "*/30 * * * *"
     # 每小时执行一次
     # - cron: "0 * * * *"
+    # 下午3点-11点，2小时一次
+    - cron: "0 15-23/2 * * *"
   push:
     branches:
       - main
